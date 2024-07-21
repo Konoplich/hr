@@ -4,6 +4,7 @@ namespace NW\WebService\References\Operations\Notification;
 
 class TsReturnOperation extends ReferencesOperation
 {
+    //Возможность указать видимость констант класса была добавлена только в PHP 7.1
     public const TYPE_NEW    = 1;
     public const TYPE_CHANGE = 2;
 
