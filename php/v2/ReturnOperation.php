@@ -134,6 +134,6 @@ class TsReturnOperation extends ReferencesOperation
             }
         }
 
-        return $result;
+        //return $result; //void фунция не должна возвращать результат
     }
 }
