@@ -1,0 +1,72 @@
+
+Phan in Browser
+(Uses Phan 5.4.1 and PHP 8.2.0RC5. Best viewed in Firefox/Chrome)
+ANALYZE RUN
+
+}
+
+
+  
+input:6: PhanReadOnlyPHPDocProperty Possibly zero write references to PHPDoc @property \NW\WebService\References\Operations\Notification\Contractor->Seller
+
+input:11: PhanReadOnlyPublicProperty Possibly zero write references to public property \NW\WebService\References\Operations\Notification\Contractor->id
+
+input:12: PhanReadOnlyPublicProperty Possibly zero write references to public property \NW\WebService\References\Operations\Notification\Contractor->type
+
+input:13: PhanReadOnlyPublicProperty Possibly zero write references to public property \NW\WebService\References\Operations\Notification\Contractor->name
+
+input:17: PhanParamTooMany Call with 1 arg(s) to \NW\WebService\References\Operations\Notification\Contractor::__construct() which only takes 0 arg(s) defined at input:8
+
+input:36: PhanUnreferencedPublicProperty Possibly zero references to public property \NW\WebService\References\Operations\Notification\Status->id
+
+input:36: PhanUnreferencedPublicProperty Possibly zero references to public property \NW\WebService\References\Operations\Notification\Status->name
+
+input:65: PhanUnusedGlobalFunctionParameter Parameter $event is never used
+
+input:65: PhanUnusedGlobalFunctionParameter Parameter $resellerId is never used
+
+input:74: PhanUnreferencedPublicClassConstant Possibly zero references to public class constant \NW\WebService\References\Operations\Notification\NotificationEvents::NEW_RETURN_STATUS
+
+input:79: PhanUnreferencedClass Possibly zero references to class \NW\WebService\References\Operations\Notification\TsReturnOperation
+
+input:88: PhanParamSignatureMismatch Declaration of function doOperation() : void should be compatible with function doOperation() : array defined in input:52
+
+input:88: PhanParamSignatureRealMismatchReturnType Declaration of function doOperation() : void should be compatible with function doOperation() : array (method where the return type in the real signature is 'void' cannot override method where the return type in the real signature is 'array') defined in input:52
+
+input:107: PhanRedundantCondition Redundant attempt to cast $notificationType of type int to int
+
+input:112: PhanImpossibleTypeComparison Impossible attempt to check if $reseller of type \NW\WebService\References\Operations\Notification\Contractor is identical to null of type null
+
+input:117: PhanImpossibleTypeComparison Impossible attempt to check if $client of type \NW\WebService\References\Operations\Notification\Contractor is identical to null of type null
+
+input:127: PhanImpossibleTypeComparison Impossible attempt to check if $cr of type \NW\WebService\References\Operations\Notification\Contractor is identical to null of type null
+
+input:132: PhanImpossibleTypeComparison Impossible attempt to check if $et of type \NW\WebService\References\Operations\Notification\Contractor is identical to null of type null
+
+input:138: PhanUndeclaredFunction Call to undeclared function \__()
+
+input:140: PhanUndeclaredFunction Call to undeclared function \__()
+
+input:169: PhanParamTooMany Call with 1 arg(s) to \NW\WebService\References\Operations\Notification\getResellerEmailFrom() which only takes 0 arg(s) defined at input:60
+
+input:174: PhanUndeclaredClassMethod Call to method sendMessage from undeclared class \NW\WebService\References\Operations\Notification\MessagesClient
+
+input:178: PhanUndeclaredFunction Call to undeclared function \__()
+
+input:179: PhanUndeclaredFunction Call to undeclared function \__()
+
+input:189: PhanUndeclaredProperty Reference to undeclared property \NW\WebService\References\Operations\Notification\Contractor->email (Did you mean $email)
+
+input:190: PhanUndeclaredClassMethod Call to method sendMessage from undeclared class \NW\WebService\References\Operations\Notification\MessagesClient
+
+input:193: PhanUndeclaredProperty Reference to undeclared property \NW\WebService\References\Operations\Notification\Contractor->email (Did you mean $email)
+
+input:194: PhanUndeclaredFunction Call to undeclared function \__()
+
+input:195: PhanUndeclaredFunction Call to undeclared function \__()
+
+input:201: PhanUndeclaredProperty Reference to undeclared property \NW\WebService\References\Operations\Notification\Contractor->mobile
+
+input:202: PhanUndeclaredClassMethod Call to method send from undeclared class \NW\WebService\References\Operations\Notification\NotificationManager
+
+input:206: PhanRedundantCondition Redundant attempt to cast $error of type null to empty
