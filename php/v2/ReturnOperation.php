@@ -26,7 +26,7 @@ class TsReturnOperation extends ReferencesOperation
 
         if (empty((int)$resellerId)) {
             $result['notificationClientBySms']['message'] = 'Empty resellerId';
-            return $result;
+            //return $result; //ошибка
         }
 
         if (empty((int)$notificationType)) {
