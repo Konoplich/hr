@@ -1,0 +1,63 @@
+Phan in Browser
+(Uses Phan 5.4.1 and PHP 8.2.0RC5. Best viewed in Firefox/Chrome)
+ANALYZE RUN
+
+}
+
+
+  
+input:5: PhanUndeclaredExtendedClass Class extends undeclared class \NW\WebService\References\Operations\Notification\ReferencesOperation
+
+input:5: PhanUnreferencedClass Possibly zero references to class \NW\WebService\References\Operations\Notification\TsReturnOperation
+
+input:14: PhanUnreferencedPublicMethod Possibly zero references to public method \NW\WebService\References\Operations\Notification\TsReturnOperation::doOperation()
+
+input:16: PhanUndeclaredMethod Call to undeclared method \NW\WebService\References\Operations\Notification\TsReturnOperation::getRequest
+
+input:33: PhanRedundantCondition Redundant attempt to cast $notificationType of type int to int
+
+input:37: PhanUndeclaredClassMethod Call to method getById from undeclared class \NW\WebService\References\Operations\Notification\Seller
+
+input:42: PhanUndeclaredClassMethod Call to method getById from undeclared class \NW\WebService\References\Operations\Notification\Contractor
+
+input:43: PhanUndeclaredClassConstant Reference to constant TYPE_CUSTOMER from undeclared class \NW\WebService\References\Operations\Notification\Contractor
+
+input:52: PhanUndeclaredClassMethod Call to method getById from undeclared class \NW\WebService\References\Operations\Notification\Employee
+
+input:57: PhanUndeclaredClassMethod Call to method getById from undeclared class \NW\WebService\References\Operations\Notification\Employee
+
+input:64: PhanUndeclaredFunction Call to undeclared function \__()
+
+input:66: PhanUndeclaredFunction Call to undeclared function \__()
+
+input:67: PhanUndeclaredClassMethod Call to method getName from undeclared class \NW\WebService\References\Operations\Notification\Status
+
+input:68: PhanUndeclaredClassMethod Call to method getName from undeclared class \NW\WebService\References\Operations\Notification\Status
+
+input:95: PhanUndeclaredFunction Call to undeclared function \getResellerEmailFrom()
+
+input:97: PhanUndeclaredFunction Call to undeclared function \getEmailsByPermit()
+
+input:100: PhanUndeclaredClassMethod Call to method sendMessage from undeclared class \NW\WebService\References\Operations\Notification\MessagesClient
+
+input:104: PhanUndeclaredFunction Call to undeclared function \__()
+
+input:105: PhanUndeclaredFunction Call to undeclared function \__()
+
+input:107: PhanUndeclaredClassConstant Reference to constant CHANGE_RETURN_STATUS from undeclared class \NW\WebService\References\Operations\Notification\NotificationEvents
+
+input:116: PhanUndeclaredClassMethod Call to method sendMessage from undeclared class \NW\WebService\References\Operations\Notification\MessagesClient
+
+input:120: PhanUndeclaredFunction Call to undeclared function \__()
+
+input:121: PhanUndeclaredFunction Call to undeclared function \__()
+
+input:123: PhanUndeclaredClassConstant Reference to constant CHANGE_RETURN_STATUS from undeclared class \NW\WebService\References\Operations\Notification\NotificationEvents
+
+input:128: PhanUndeclaredClassConstant Reference to constant CHANGE_RETURN_STATUS from undeclared class \NW\WebService\References\Operations\Notification\NotificationEvents
+
+input:128: PhanUndeclaredClassMethod Call to method send from undeclared class \NW\WebService\References\Operations\Notification\NotificationManager
+
+input:132: PhanRedundantCondition Redundant attempt to cast $error of type null to empty
+
+Fork me on GitHub
