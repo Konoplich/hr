@@ -17,7 +17,7 @@ class Contractor
     public static function getById(int $resellerId): self
     {
         //Создается новый экземпляр класса, но данные из реальной БД или другого источника не извлекаются
-        //Следовательно метод подделыет результат
+        //Следовательно метод подделывает результат
         /*Советую такой вариант
             $instance = new self();
             $instance->id = $resellerId;
