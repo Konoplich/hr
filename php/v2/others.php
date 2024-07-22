@@ -15,14 +15,14 @@ class Contractor
 
     public static function getById(int $resellerId): self
     {
-		//Создается новый экземпляр класса, но данные из реальной БД или другого источника не извлекаются
-		//Следовательно метод подделвыет результат
-		/*Советую такой вариант
-			$instance = new self();
-			$instance->id = $resellerId;
-			//Инициализируем остальные данные
-			return $instance; 
-		 */
+        //Создается новый экземпляр класса, но данные из реальной БД или другого источника не извлекаются
+        //Следовательно метод подделвыет результат
+        /*Советую такой вариант
+            $instance = new self();
+            $instance->id = $resellerId;
+            //Инициализируем остальные данные
+            return $instance; 
+         */
         return new self($resellerId); // fakes the getById method 
     }
 
@@ -42,11 +42,12 @@ class Employee extends Contractor
 
 class Status
 {
-	//переменная $name нигде не используется, можно удалить
+    //переменная $name нигде не используется, можно удалить
     public $id, $name;
 
     public static function getName(int $id): string
-    {/*
+    {
+/*
         $a = [
             0 => 'Completed',
             1 => 'Pending',

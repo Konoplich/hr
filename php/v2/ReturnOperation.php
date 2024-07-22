@@ -5,7 +5,7 @@ namespace NW\WebService\References\Operations\Notification;
 
 class TsReturnOperation extends ReferencesOperation
 {
-	public const TYPE_NEW    = 1;
+    public const TYPE_NEW    = 1;
     public const TYPE_CHANGE = 2;
 
     /**
@@ -23,8 +23,8 @@ class TsReturnOperation extends ReferencesOperation
         
         if(empty($request['resellerId']) || !isset($request['notificationType']))
         {
-		throw new \Exception('Required data is missing');
-	}
+        throw new \Exception('Required data is missing');
+        }
         
         $resellerId = (int)$request['resellerId'] ?? 0;
         $notificationType = (int)$request['notificationType'] ?? 0;
@@ -60,13 +60,13 @@ class TsReturnOperation extends ReferencesOperation
 
         $clientFullName = $client->getFullName() ?: $client->name;
    
-		$creatorId = (int) $request['creatorId'] ?? 0;
+        $creatorId = (int) $request['creatorId'] ?? 0;
         $creator = Employee::getById($creatorId);
         if ($creator === null) {
             throw new \Exception('Creator not found!', 400);
         }
 
-		$expertId = (int) $request['expertId'] ?? 0;
+        $expertId = (int) $request['expertId'] ?? 0;
         $expert = Employee::getById($expertId);
         if ($expert === null) {
             throw new \Exception('Expert not found!', 400);
@@ -76,10 +76,12 @@ class TsReturnOperation extends ReferencesOperation
         if ($notificationType === self::TYPE_NEW) {
             $differences = __('NewPositionAdded', null, $resellerId);
         } elseif ($notificationType === self::TYPE_CHANGE && !empty($request['differences'])) {
-            $differences = __('PositionStatusHasChanged', [
+            $differences = __(
+                'PositionStatusHasChanged', [
                     'FROM' => Status::getName((int)$request['differences']['from']),
                     'TO'   => Status::getName((int)$request['differences']['to']),
-                ], $resellerId);
+                ], $resellerId
+            );
         }
 
         $templateData = [
@@ -110,14 +112,16 @@ class TsReturnOperation extends ReferencesOperation
         $emails = getEmailsByPermit($resellerId, 'tsGoodsReturn');
         if (!empty($emailFrom) && count($emails) > 0) {
             foreach ($emails as $email) {
-                MessagesClient::sendMessage([
+                MessagesClient::sendMessage(
+                    [
                     0 => [ // MessageTypes::EMAIL
                            'emailFrom' => $emailFrom,
                            'emailTo'   => $email,
                            'subject'   => __('complaintEmployeeEmailSubject', $templateData, $resellerId),
                            'message'   => __('complaintEmployeeEmailBody', $templateData, $resellerId),
                     ],
-                ], $resellerId, NotificationEvents::CHANGE_RETURN_STATUS);
+                    ], $resellerId, NotificationEvents::CHANGE_RETURN_STATUS
+                );
                 $result['notificationEmployeeByEmail'] = true;
 
             }
@@ -126,14 +130,16 @@ class TsReturnOperation extends ReferencesOperation
         // Шлём клиентское уведомление, только если произошла смена статуса
         if ($notificationType === self::TYPE_CHANGE && !empty($request['differences']['to'])) {
             if (!empty($emailFrom) && !empty($client->email)) {
-                MessagesClient::sendMessage([
+                MessagesClient::sendMessage(
+                    [
                     0 => [ // MessageTypes::EMAIL
                            'emailFrom' => $emailFrom,
                            'emailTo'   => $client->email,
                            'subject'   => __('complaintClientEmailSubject', $templateData, $resellerId),
                            'message'   => __('complaintClientEmailBody', $templateData, $resellerId),
                     ],
-                ], $resellerId, $client->id, NotificationEvents::CHANGE_RETURN_STATUS, (int)$request['differences']['to']);
+                    ], $resellerId, $client->id, NotificationEvents::CHANGE_RETURN_STATUS, (int)$request['differences']['to']
+                );
                 $result['notificationClientByEmail'] = true;
             }
 
