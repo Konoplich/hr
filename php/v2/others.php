@@ -6,6 +6,7 @@ namespace NW\WebService\References\Operations\Notification;
 /**
  * @property Seller $Seller
  */
+ //в классе нет конструкторов, это значит, что он может быть создан без каких либо параметров
 class Contractor
 {
     const TYPE_CUSTOMER = 0;
@@ -16,13 +17,14 @@ class Contractor
     public static function getById(int $resellerId): self
     {
         //Создается новый экземпляр класса, но данные из реальной БД или другого источника не извлекаются
-        //Следовательно метод подделвыет результат
+        //Следовательно метод подделыет результат
         /*Советую такой вариант
             $instance = new self();
             $instance->id = $resellerId;
             //Инициализируем остальные данные
             return $instance; 
          */
+         //нет конструктора с одним параметром
         return new self($resellerId); // fakes the getById method 
     }
 
@@ -79,7 +81,7 @@ abstract class ReferencesOperation
     }
 }
 
-function getResellerEmailFrom()
+function getResellerEmailFrom($resellerId)
 {
     return 'contractor@example.com';
 }
