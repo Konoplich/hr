@@ -1,67 +1,40 @@
 
 FILE: /home/sergey/php/hr/php/v2/ReturnOperation.php
-------------------------------------------------------------------------------------------------------------
-FOUND 18 ERRORS AND 13 WARNINGS AFFECTING 26 LINES
-------------------------------------------------------------------------------------------------------------
-   8 | ERROR   | [x] Spaces must be used to indent lines; tabs are not allowed
-  14 | ERROR   | [ ] Line exceeds maximum limit of 120 characters; contains 121 characters
-  15 | WARNING | [ ] Line exceeds 80 characters; contains 115 characters
-  16 | WARNING | [ ] Line exceeds 80 characters; contains 93 characters
-  24 | ERROR   | [ ] Expected "if (...) {\n"; found "if(...)\n        {\n"
-  24 | WARNING | [ ] Line exceeds 80 characters; contains 81 characters
-  26 | ERROR   | [x] Spaces must be used to indent lines; tabs are not allowed
-  27 | ERROR   | [x] Spaces must be used to indent lines; tabs are not allowed
-  27 | ERROR   | [x] Closing brace indented incorrectly; expected 8 spaces, found 1
-  57 | ERROR   | [ ] Variable "Seller" is not in valid camel caps format
-  57 | WARNING | [ ] Line exceeds 80 characters; contains 117 characters
-  63 | ERROR   | [x] Spaces must be used to indent lines; tabs are not allowed
-  69 | ERROR   | [x] Spaces must be used to indent lines; tabs are not allowed
-  78 | WARNING | [ ] Line exceeds 80 characters; contains 95 characters
-  79 | ERROR   | [x] Opening parenthesis of a multi-line function call must be the last content on the line
-  80 | WARNING | [ ] Line exceeds 80 characters; contains 84 characters
-  81 | WARNING | [ ] Line exceeds 80 characters; contains 82 characters
-  82 | ERROR   | [x] Multi-line function call not indented correctly; expected 12 spaces but found 16
-  82 | ERROR   | [x] Closing parenthesis of a multi-line function call must be on a line by itself
- 101 | WARNING | [ ] Line exceeds 80 characters; contains 88 characters
- 113 | ERROR   | [x] Opening parenthesis of a multi-line function call must be the last content on the line
- 117 | WARNING | [ ] Line exceeds 80 characters; contains 106 characters
- 118 | WARNING | [ ] Line exceeds 80 characters; contains 103 characters
- 120 | ERROR   | [x] Closing parenthesis of a multi-line function call must be on a line by itself
- 127 | WARNING | [ ] Line exceeds 80 characters; contains 95 characters
- 129 | ERROR   | [x] Opening parenthesis of a multi-line function call must be the last content on the line
- 133 | WARNING | [ ] Line exceeds 80 characters; contains 104 characters
- 134 | WARNING | [ ] Line exceeds 80 characters; contains 101 characters
- 136 | ERROR   | [x] Closing parenthesis of a multi-line function call must be on a line by itself
- 136 | ERROR   | [ ] Line exceeds maximum limit of 120 characters; contains 123 characters
- 141 | ERROR   | [ ] Line exceeds maximum limit of 120 characters; contains 176 characters
-------------------------------------------------------------------------------------------------------------
-PHPCBF CAN FIX THE 13 MARKED SNIFF VIOLATIONS AUTOMATICALLY
-------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+FOUND 5 ERRORS AND 13 WARNINGS AFFECTING 16 LINES
+---------------------------------------------------------------------------------------
+  14 | ERROR   | Line exceeds maximum limit of 120 characters; contains 121 characters
+  15 | WARNING | Line exceeds 80 characters; contains 115 characters
+  16 | WARNING | Line exceeds 80 characters; contains 93 characters
+  24 | ERROR   | Expected "if (...) {\n"; found "if(...)\n        {\n"
+  24 | WARNING | Line exceeds 80 characters; contains 81 characters
+  57 | ERROR   | Variable "Seller" is not in valid camel caps format
+  57 | WARNING | Line exceeds 80 characters; contains 117 characters
+  78 | WARNING | Line exceeds 80 characters; contains 95 characters
+  81 | WARNING | Line exceeds 80 characters; contains 84 characters
+  82 | WARNING | Line exceeds 80 characters; contains 82 characters
+ 103 | WARNING | Line exceeds 80 characters; contains 88 characters
+ 120 | WARNING | Line exceeds 80 characters; contains 106 characters
+ 121 | WARNING | Line exceeds 80 characters; contains 103 characters
+ 131 | WARNING | Line exceeds 80 characters; contains 95 characters
+ 138 | WARNING | Line exceeds 80 characters; contains 104 characters
+ 139 | WARNING | Line exceeds 80 characters; contains 101 characters
+ 141 | ERROR   | Line exceeds maximum limit of 120 characters; contains 125 characters
+ 147 | ERROR   | Line exceeds maximum limit of 120 characters; contains 176 characters
+---------------------------------------------------------------------------------------
 
-Time: 85ms; Memory: 6MB
+Time: 499ms; Memory: 6MB
 
 
 FILE: /home/sergey/php/hr/php/v2/others.php
-----------------------------------------------------------------------------------------------
-FOUND 10 ERRORS AND 4 WARNINGS AFFECTING 13 LINES
-----------------------------------------------------------------------------------------------
- 18 | ERROR   | [x] Spaces must be used to indent lines; tabs are not allowed
- 18 | WARNING | [ ] Line exceeds 80 characters; contains 99 characters
- 19 | ERROR   | [x] Spaces must be used to indent lines; tabs are not allowed
- 20 | ERROR   | [x] Spaces must be used to indent lines; tabs are not allowed
- 21 | ERROR   | [x] Spaces must be used to indent lines; tabs are not allowed
- 22 | ERROR   | [x] Spaces must be used to indent lines; tabs are not allowed
- 23 | ERROR   | [x] Spaces must be used to indent lines; tabs are not allowed
- 24 | ERROR   | [x] Spaces must be used to indent lines; tabs are not allowed
- 25 | ERROR   | [x] Spaces must be used to indent lines; tabs are not allowed
- 45 | ERROR   | [x] Spaces must be used to indent lines; tabs are not allowed
- 49 | ERROR   | [x] Opening brace must be the last content on the line
- 81 | WARNING | [ ] Consider putting global function "getResellerEmailFrom" in a static class
- 86 | WARNING | [ ] Consider putting global function "getEmailsByPermit" in a static class
- 89 | WARNING | [ ] Line exceeds 80 characters; contains 87 characters
-----------------------------------------------------------------------------------------------
-PHPCBF CAN FIX THE 10 MARKED SNIFF VIOLATIONS AUTOMATICALLY
-----------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 4 WARNINGS AFFECTING 4 LINES
+------------------------------------------------------------------------------------------
+ 18 | WARNING | Line exceeds 80 characters; contains 105 characters
+ 82 | WARNING | Consider putting global function "getResellerEmailFrom" in a static class
+ 87 | WARNING | Consider putting global function "getEmailsByPermit" in a static class
+ 90 | WARNING | Line exceeds 80 characters; contains 87 characters
+------------------------------------------------------------------------------------------
 
-Time: 65ms; Memory: 4MB
+Time: 63ms; Memory: 4MB
 
