@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace NW\WebService\References\Operations\Notification;
 
@@ -8,13 +9,21 @@ namespace NW\WebService\References\Operations\Notification;
 class Contractor
 {
     const TYPE_CUSTOMER = 0;
-    public $id;
+    public $id; 
     public $type;
     public $name;
 
     public static function getById(int $resellerId): self
     {
-        return new self($resellerId); // fakes the getById method
+		//Создается новый экземпляр класса, но данные из реальной БД или другого источника не извлекаются
+		//Следовательно метод подделвыет результат
+		/*Советую такой вариант
+			$instance = new self();
+			$instance->id = $resellerId;
+			//Инициализируем остальные данные
+			return $instance; 
+		 */
+        return new self($resellerId); // fakes the getById method 
     }
 
     public function getFullName(): string
@@ -33,10 +42,11 @@ class Employee extends Contractor
 
 class Status
 {
+	//переменная $name нигде не используется, можно удалить
     public $id, $name;
 
     public static function getName(int $id): string
-    {
+    {/*
         $a = [
             0 => 'Completed',
             1 => 'Pending',
@@ -44,6 +54,16 @@ class Status
         ];
 
         return $a[$id];
+       */
+       //лучше так:
+       
+        $statusNames = [
+            0 => 'Completed',
+            1 => 'Pending',
+            2 => 'Rejected',
+        ];
+
+        return $statusNames[$id];
     }
 }
 
@@ -53,7 +73,8 @@ abstract class ReferencesOperation
 
     public function getRequest($pName)
     {
-        return $_REQUEST[$pName];
+        //return $_REQUEST[$pName];
+        return $_REQUEST[$pName] ?? null;
     }
 }
 
@@ -65,7 +86,7 @@ function getResellerEmailFrom()
 function getEmailsByPermit($resellerId, $event)
 {
     // fakes the method
-    return ['someemeil@example.com', 'someemeil2@example.com'];
+    return ['someemeil@example.com', 'someemeil2@example.com']; //правильно "someemail"
 }
 
 class NotificationEvents
