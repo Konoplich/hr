@@ -151,8 +151,9 @@ class TsReturnOperation extends ReferencesOperation
 
         $clientId = (int) $request['clientId'] ?? 0;
         $client = Contractor::getById($clientId);
-        //$client->Seller->id  не определен
-        if ($client === null || $client->type !== Contractor::TYPE_CUSTOMER || $client->Seller->id !== $resellerId) {
+        //$client->Seller->id  не определен, проверка на случай когда покупает не посредник?
+        //if ($client === null || $client->type !== Contractor::TYPE_CUSTOMER || $client->Seller->id !== $resellerId) {
+        if ($client === null || $client->type !== Contractor::TYPE_CUSTOMER || $client->id !== $resellerId) {
             throw new \Exception('Client not found!', 400);
         }
 
